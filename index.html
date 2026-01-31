@@ -10,48 +10,38 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f5;
-            min-height: 100vh;
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+        .fullscreen-viewer {
+            width: 100vw;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 40px 20px;
+            background: #000;
         }
-        h1 {
-            color: #333;
-            margin-bottom: 30px;
-        }
-        .showcase {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            max-width: 900px;
-            width: 100%;
-        }
-        .showcase img {
+        .fullscreen-viewer img {
             max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+            max-height: 100%;
+            object-fit: contain;
         }
-        .showcase iframe {
+        .fullscreen-viewer iframe {
             width: 100%;
-            height: 600px;
+            height: 100%;
             border: none;
         }
     </style>
 </head>
 <body>
-    <h1>Showcase</h1>
-
-    <div class="showcase">
-        <!-- For PNG/JPG images, use: -->
+    <div class="fullscreen-viewer">
+        <!-- För PNG/JPG bilder, använd: -->
         <!-- <img src="example.png" alt="Showcase image"> -->
 
-        <!-- For PDF files, replace the img tag above with: -->
+        <!-- För PDF-filer: -->
         <iframe src="showen grej.pdf"></iframe>
     </div>
 </body>
